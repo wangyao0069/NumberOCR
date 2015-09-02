@@ -9,6 +9,7 @@
 #include <QMouseEvent>
 
 #include "ui_numberorc.h"
+#include<opencv2/opencv.hpp>
 
 #define NUM 3
 
@@ -17,6 +18,14 @@ typedef struct {
 	int end;
 	int cur;
 	int count;
+
+	int x_s;
+	int y_s;
+	int x_e;
+	int y_e;
+
+	int width;
+	int height;
 } ImagesInfo;
 
 class NumberORC : public QMainWindow
@@ -35,14 +44,16 @@ protected:
 		void Recognition();
 private:
 	void LoadImages();
+	void DrawImageRect();
 	void LoadThumbnail(int index);
+	IplImage *QImageToIplImage(const QImage * qImage);
 private:
 	Ui::NumberORCClass ui;
 
 	QStringList files;
 	ImagesInfo imagesInfo;
 	QImage* image[NUM];
-
+	QImage* roi;
 	QLabel statusLabel;
 };
 

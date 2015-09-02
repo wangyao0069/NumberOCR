@@ -59,7 +59,7 @@ public:
     {
         if (NumberORCClass->objectName().isEmpty())
             NumberORCClass->setObjectName(QString::fromUtf8("NumberORCClass"));
-        NumberORCClass->resize(736, 517);
+        NumberORCClass->resize(913, 647);
         centralWidget = new QWidget(NumberORCClass);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         horizontalLayout_4 = new QHBoxLayout(centralWidget);
@@ -77,7 +77,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 440, 392));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 617, 522));
         verticalLayout_2 = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout_2->setSpacing(6);
         verticalLayout_2->setContentsMargins(11, 11, 11, 11);
